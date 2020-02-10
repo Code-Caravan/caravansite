@@ -1,0 +1,7 @@
+<div class=“container”>
+    <h1><%= t(‘.contact_mail’) %></h1>
+    <p><%= t(‘.from’, mail: @contact.email) %></p>
+    <h2><%= @contact.name %></h2>
+    <h3><%= t(‘.subject’, subject: @contact.subject) %></h3>
+    <p><%= @contact.content %></p>
+</div>

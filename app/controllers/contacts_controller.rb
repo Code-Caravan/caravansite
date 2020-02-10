@@ -1,11 +1,11 @@
-class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+class ContactsController < ApplicationController
+    skip_before_action :authenticate_user!, only: %i[new create]
 
-  def home
-    @contact = Contact.new
-  end
+	def new
+		@contact = Contact.new
+	end
 
-  def create
+	def create
 		@contact = Contact.new(contact_params)
 
 		if @contact.save
@@ -15,9 +15,9 @@ class PagesController < ApplicationController
 		else
 			render :new
 		end
-  end
+	end
 
-  private
+	private
 
 	def contact_params
 		params.require(:contact).permit(:name, :email, :subject, :content)

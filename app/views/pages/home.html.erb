@@ -2,7 +2,40 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 
+<div class="container-menu" >
+	<div class="ideacao">
+		<h1> < IDEACAO E CODIGO /> </h1>
+	</div>
+	<div class="menu">
+		<div class="menu-navbar">
+			<p>Servicos</p>
+			<p>Quem Somos</p>
+			<p>Contato</p>
+		</div>
+				<h1> Aqui temos uma imagem </h1>
+	</div>
+</div>
+
+<div class="container-services">
+	<div class="card-services">
+		Imagem tag
+		<h3>Tecnologia</h3>
+		<p>Descricao</p>
+	</div>
+		<div class="card-services">
+		Imagem tag
+		<h3>Tecnologia</h3>
+		<p>Descricao</p>
+	</div>
+		<div class="card-services">
+		Imagem tag
+		<h3>Tecnologia</h3>
+		<p>Descricao</p>
+	</div>
+</div>
+
 <%# configurar form action para email registrado %>
+
 <form action="#" method="post">
     <ul>
     <li>
@@ -26,6 +59,27 @@
     </li>
     </ul>    
 </form>
+
+<div class="container p-5">
+  <div class="row justify-content-center contact-card">
+    <div class="col-12 col-md-6">
+      <div class="card">
+        <div class="card-title text-center p-3">
+          <h1><%= t('.contact_us') %></h1>
+        </div>
+        <div class="card-body">
+          <%= simple_form_for @contact do |f| %>
+            <%= f.input :name %>
+            <%= f.input :email %>
+            <%= f.input :subject %>
+            <%= f.input :content %>
+            <%= f.submit value: t('.send'), class: 'btn btn-dark float-right' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <%# <%= simple_form_for @user do |f| %> %>
